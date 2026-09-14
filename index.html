@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aka Wilfried | Développeur Full Stack</title>
+
+  <!-- Police Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       ÉCRAN DE CHARGEMENT
+       Apparaît en premier quand on ouvre le site
+  ============================================= -->
+  <div id="loader-screen">
+    <div class="loader-content">
+      <h1>Aka Wilfried</h1>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <p class="progress-text" id="progressText">Chargement 0%</p>
+    </div>
+  </div>
+
+
+  <!-- ============================================
+       SÉQUENCE DE TEXTES D'INTRODUCTION
+       HEY → MY NAME IS → Aka Wilfried → Développeur Full Stack
+  ============================================= -->
+  <div id="intro-text-screen">
+    <h1 class="intro-title" id="text1">HEY</h1>
+    <h1 class="intro-title" id="text2">MY NAME IS</h1>
+    <h1 class="intro-title" id="text3">Aka Wilfried</h1>
+    <h1 class="intro-title" id="text4">Développeur Full Stack</h1>
+  </div>
+
+
+  <!-- ============================================
+       CONTENU PRINCIPAL DU SITE
+       Caché au début, apparaît après l'intro
+  ============================================= -->
+  <div id="main-portfolio" style="visibility: hidden; opacity: 0;">
+
+    <!-- ========== BARRE DE NAVIGATION ========== -->
+    <nav class="navbar">
+      <a href="#home" class="navbar__logo">AW.</a>
+
+      <div class="navbar__right">
+        <div class="navbar__badge">
+          <span class="navbar__badge-dot"></span>
+          Disponible pour missions
+        </div>
+
+        <ul class="navbar__links">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- ========== SECTION ACCUEIL ========== -->
+    <section class="hero" id="home">
+      <div class="hero__grid">
+        
+        <!-- Texte de gauche -->
+        <div class="hero__left">
+          <div class="signature post-intro-anim delay-1">
+            <span class="signature__text">Aka Wilfried</span>
+            <svg class="signature__underline" viewBox="0 0 100 20">
+              <path d="M0 15 Q 25 5 50 12 T 100 8" />
+            </svg>
+          </div>
+
+          <h1 class="hero__title post-intro-anim delay-2">
+            Développeur<br>Full Stack
+          </h1>
+
+          <p class="hero__subtitle post-intro-anim delay-3">
+            Côte d'Ivoire • Passionné par le code
+          </p>
+
+          <p class="hero__description post-intro-anim delay-4">
+            Je transforme les idées en applications web modernes, 
+            rapides et adaptées aux besoins des entreprises et particuliers.
+          </p>
+
+          <div class="hero__buttons post-intro-anim delay-5">
+            <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn--outline">Me contacter</a>
+          </div>
+
+          <div class="hero__socials post-intro-anim delay-6">
+            <a href="https://github.com/wilfriedahouaaka-cmd" target="_blank" class="social-icon" title="GitHub">GH</a>
+            <a href="#" class="social-icon" title="LinkedIn">IN</a>
+            <a href="https://wa.me/2250715383096" target="_blank" class="social-icon" title="WhatsApp">WA</a>
+          </div>
+        </div>
+
+        <!-- Aperçu de code à droite -->
+        <div class="hero__right post-intro-anim delay-4">
+          <div class="code-mockup">
+            <div class="code-mockup__bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="code-mockup__lines">
+              <div><span class="cm-key">const</span> <span class="cm-var">developer</span> = {</div>
+              <div>  name: <span class="cm-str">"Aka Wilfried"</span>,</div>
+              <div>  role: <span class="cm-str">"Full Stack"</span>,</div>
+              <div>  location: <span class="cm-str">"Côte d'Ivoire"</span>,</div>
+              <div>  available: <span class="cm-bool">true</span></div>
+              <div>};</div>
+            </div>
+          </div>
+
+          <div class="floating-tag floating-tag--1">HTML / CSS</div>
+          <div class="floating-tag floating-tag--2">JavaScript</div>
+          <div class="floating-tag floating-tag--3">React</div>
+        </div>
+      </div>
+
+      <!-- Indicateur Scroll -->
+      <a href="#about" class="scroll-indicator">
+        <div class="scroll-indicator__mouse">
+          <div class="scroll-indicator__dot"></div>
+        </div>
+        <span class="scroll-indicator__label">Scroll</span>
+      </a>
+    </section>
+
+
+    <!-- ========== SECTION À PROPOS ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-eka">
+          
+          <!-- Texte gauche -->
+          <div class="about-eka__left reveal-left">
+            <h2>Hi, I'm<br><span>Aka Wilfried</span></h2>
+            <p class="about-eka__role">Développeur Full Stack en formation</p>
+            <p>
+              Étudiant en informatique en Côte d’Ivoire.  
+              Passionné par le développement web depuis ma première année.
+            </p>
+            <div class="about-eka__buttons">
+              <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+              <a href="#contact" class="btn btn--outline">Me contacter</a>
+            </div>
+          </div>
+
+          <!-- Photo au centre -->
+          <div class="about-eka__photo reveal-up">
+            <div class="about-eka__frame">
+              <!-- L'image doit s'appeler wilfried.jpeg et être dans le dossier img/ -->
+              <img src="wilfried.png" alt="Aka Wilfried" />
+            </div>
+          </div>
+
+          <!-- Texte droite -->
+          <div class="about-eka__right reveal-right">
+            <p>
+              Je me forme intensivement au développement Full Stack  
+              pour créer des solutions digitales modernes,  
+              utiles et adaptées aux besoins en Afrique.
+            </p>
+            <p>
+              Actuellement disponible pour des missions  
+              et des collaborations.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== SECTION PARCOURS ========== -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="edu-exp">
+          
+          <!-- Éducation -->
+          <div class="edu-exp__col reveal-left">
+            <h3 class="edu-exp__title">Éducation</h3>
+
+            <div class="edu-card">
+              <div class="edu-card__icon">🎓</div>
+              <div>
+                <h4>Informatique</h4>
+                <p>Première année • Côte d’Ivoire</p>
+                <span>2024 – Présent</span>
+              </div>
+            </div>
+
+            <div class="edu-card" style="transition-delay: 0.15s">
+              <div class="edu-card__icon">📚</div>
+              <div>
+                <h4>Formation Full Stack</h4>
+                <p>Auto-formation intensive</p>
+                <span>2024 – Présent</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Focus actuel -->
+          <div class="edu-exp__col reveal-right">
+            <h3 class="edu-exp__title">Focus actuel</h3>
+
+            <div class="edu-card">
+              <div class="edu-card__icon">💻</div>
+              <div>
+                <h4>Développement Web</h4>
+                <p>Frontend & Backend</p>
+                <span>En cours</span>
+              </div>
+            </div>
+
+            <div class="edu-card" style="transition-delay: 0.15s">
+              <div class="edu-card__icon">🚀</div>
+              <div>
+                <h4>Projets personnels</h4>
+                <p>Apprentissage par la pratique</p>
+                <span>En cours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat-box reveal-up">
+            <span class="stat-box__number" data-count-to="2">0</span>
+            <p>Projets réalisés</p>
+          </div>
+          <div class="stat-box reveal-up" style="transition-delay: 0.15s">
+            <span class="stat-box__number" data-count-to="5">0</span>
+            <p>Technologies</p>
+          </div>
+          <div class="stat-box reveal-up" style="transition-delay: 0.3s">
+            <span class="stat-box__number" data-count-to="1">0</span>
+            <p>Année d’apprentissage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== SECTION PROJETS ========== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="reveal-on-scroll">Mes Projets</h2>
+        <p class="section-subtitle reveal-on-scroll">Les projets que j’ai réalisés jusqu’à présent</p>
+
+        <div class="projects-grid">
+          
+          <!-- Projet 1 -->
+          <div class="project-card reveal-left">
+            <div class="project-card__image">
+              <div class="project-card__placeholder">📋</div>
+            </div>
+            <div class="project-card__body">
+              <h3>Gestion des Tâches</h3>
+              <p>Application web pour organiser et suivre ses tâches quotidiennes.</p>
+              <div class="project-card__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="https://wilfriedahouaaka-cmd.github.io/gestionnaire-taches/" target="_blank" class="btn btn--outline btn--sm">
+                Voir →
+              </a>
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="project-card reveal-right" style="transition-delay: 0.15s">
+            <div class="project-card__image">
+              <div class="project-card__placeholder">💰</div>
+            </div>
+            <div class="project-card__body">
+              <h3>Gestion des Dépenses</h3>
+              <p>Application pour suivre et gérer ses dépenses personnelles.</p>
+              <div class="project-card__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <a href="https://wilfriedahouaaka-cmd.github.io/gestionnaire-depenses/" target="_blank" class="btn btn--outline btn--sm">
+                Voir →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== SECTION TECHNOLOGIES ========== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal-on-scroll">Technologies</h2>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal-left">
+            <span class="tech-icon">🖥️</span>
+            <h3>Frontend</h3>
+            <p>HTML • CSS • JavaScript</p>
+          </div>
+          <div class="tech-card reveal-up" style="transition-delay: 0.1s">
+            <span class="tech-icon">⚙️</span>
+            <h3>Backend</h3>
+            <p>Node.js • Express (en apprentissage)</p>
+          </div>
+          <div class="tech-card reveal-right" style="transition-delay: 0.2s">
+            <span class="tech-icon">🛠️</span>
+            <h3>Outils</h3>
+            <p>Git • VS Code • GitHub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== SECTION CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="reveal-on-scroll">Contactez-moi</h2>
+        <p class="contact__intro reveal-on-scroll">
+          Vous avez un projet ou une idée ? Envoyez-moi un message, 
+          je vous réponds rapidement sur WhatsApp.
+        </p>
+
+        <form id="contactForm" class="contact__form reveal-up">
+          <div class="form-group">
+            <label for="contactName">Votre nom</label>
+            <input type="text" id="contactName" required placeholder="Ex: Jean Kouassi" />
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Votre message</label>
+            <textarea id="contactMessage" rows="5" required placeholder="Parlez-moi de votre projet..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary">
+            Envoyer sur WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- Particules en arrière-plan -->
+  <div id="particles-js"></div>
+
+  <!-- Bibliothèque tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+  <!-- Notre script -->
+  <script src="script.js"></script>
+</body>
+</html>
